@@ -1,0 +1,54 @@
+.testimonial {
+   
+    width: 80%;
+    padding: 4rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    box-shadow: 0 3rem 6rem rgba($color: $color-black, $alpha: .15);
+    font-size: $default-font-size;
+    border-radius: 100rem;
+    padding-left: 9rem;
+    background-color: rgba($color: $color-white, $alpha: 1);
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        background-color: aquamarine;
+        float: left;
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem);
+        // margin-top: -1rem ;
+        shape-outside: circle(50% at 50% 50%);
+        position: relative;
+    }
+    &__img {
+        width: 100%;
+        // transition: all 0.3s ease;
+        cursor: pointer;
+        // transform: translateY(-2rem);
+    }
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        // background-color: rgba($color: $color-white, $alpha: 1);
+        text-align: center;
+        font-size: 1.7rem;
+        opacity: 0;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+    }
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        
+    }
+    &:hover &__img {
+        transform: scale(1.05);
+        filter: blur(.5rem) brightness(70%);
+    }
+
+}
